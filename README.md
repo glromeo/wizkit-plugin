@@ -1,4 +1,4 @@
-# WizKit IntelliJ Plugin  [![CircleCI](https://circleci.com/gh/wizkit/IdeaWizKit/tree/main.svg?style=svg)](https://circleci.com/gh/wizkit/IdeaWizKit/tree/main)
+# WizKit IntelliJ Plugin  (ripoff of pivotal's Jasmine plugin)
 
 This adds a new run configuration to IntelliJ (and IntelliJ based IDEs) that runs WizKit and displays the results in the test console.
 
