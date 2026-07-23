@@ -1,0 +1,12 @@
+IdeaWizKit*.zip
+out/
+lib/
+.packaging.gradle/
+build/
+.sandbox/
+.gradle/
+*.iml
+.idea/
+/.intellijPlatform/
+/.kotlin
+.DS_Store

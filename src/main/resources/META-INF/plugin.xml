@@ -1,0 +1,21 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+  <id>org.wizkit.wizkit</id>
+  <name>WizKit</name>
+  <vendor email="wizkit-js@googlegroups.com" url="http://wizkit.github.io">WizKit</vendor>
+
+  <depends>JavaScript</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.json</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <configurationType implementation="org.wizkit.intellij.runner.WizKitConfigurationType"/>
+    <programRunner implementation="org.wizkit.intellij.runner.WizKitRunProgramRunner"/>
+    <programRunner implementation="org.wizkit.intellij.runner.WizKitDebugProgramRunner"/>
+    <runConfigurationProducer implementation="org.wizkit.intellij.runner.WizKitRunConfigurationProducer"/>
+    <iconProvider implementation="org.wizkit.intellij.runner.WizKitConfigIconProvider"/>
+
+    <runLineMarkerContributor language="JavaScript" implementationClass="org.wizkit.intellij.runner.WizKitRunLineMarkerContributor"/>
+    <notificationGroup id="WizKit Plugin" displayType="BALLOON"/>
+  </extensions>
+</idea-plugin>
