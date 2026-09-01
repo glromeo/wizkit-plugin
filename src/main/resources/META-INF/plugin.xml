@@ -8,6 +8,12 @@
   <depends>com.intellij.modules.lang</depends>
   <depends>com.intellij.modules.json</depends>
 
+  <dependencies>
+    <!-- SM test runner lives in the bundled Test Runner plugin since IDEA 2026.2 -->
+    <module name="intellij.platform.testRunner"/>
+    <module name="intellij.platform.smRunner"/>
+  </dependencies>
+
   <extensions defaultExtensionNs="com.intellij">
     <configurationType implementation="org.wizkit.intellij.runner.WizKitConfigurationType"/>
     <programRunner implementation="org.wizkit.intellij.runner.WizKitRunProgramRunner"/>

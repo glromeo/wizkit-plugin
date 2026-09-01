@@ -28,6 +28,13 @@ dependencies {
         local("C:/Program Files/JetBrains/IntelliJ IDEA")
         // JavaScript requires the CSS plugin's modules since IDEA 2026.1
         bundledPlugins("JavaScript", "JavaScriptDebugger", "com.intellij.modules.json", "com.intellij.css")
+        // Since IDEA 2026.2 these platform modules live in bundled implementation-detail
+        // plugins. Their descriptors have to be on the classpath or the plugin graph stays
+        // unresolved in unit tests and JavaScript/JSON/CSS never load.
+        bundledPlugin("intellij.testRunner.plugin")      // intellij.platform.{testRunner,smRunner}
+        bundledPlugin("intellij.structureView.plugin")   // intellij.platform.structureView
+        bundledPlugin("intellij.libraries.misc.plugin")  // intellij.libraries.lucene.common
+        bundledPlugin("com.intellij.modules.jcef")       // intellij.libraries.jcef
         testFramework(TestFrameworkType.Platform)
     }
 
